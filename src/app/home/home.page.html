@@ -1,14 +1,64 @@
+<head>  
+    <link href="assets/animate.css" rel="stylesheet">
+    <link href="/src/app/home/home.page.scss" rel="stylesheet">
+</head>  
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card (click)="ToggleColorSelector()">
+        <h1 style="text-align: center;">Master Mind</h1>
+        
+        </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+      <!-- <ion-button color="primary" Expand="full">
+          <ion-icon name="color-palette"></ion-icon>
+          Color
+    </ion-button> -->
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<div class="slideInUp">
+    <ion-button color="primary" class="SelectedColor" Expand="full" style="height: 10px;"></ion-button>
+</div>
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div class="col-xs-12" class="ColorSelector" style="visibility: collapse; background-image: 'assets/brain-icon-heart.png'" >
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div>
+                  <ion-button class="colorRange" shape="round" Expand="full" color="primary" (click)="ChangeColor('primary')" ></ion-button>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                  <ion-button class="colorRange" shape="round" Expand="full" color="warning" (click)="ChangeColor('warning')"></ion-button>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                  <ion-button class="colorRange" width="100%" shape="round" Expand="full" color="danger" (click)="ChangeColor('danger')" ></ion-button>
+              </div>
+            </ion-col>
+            <ion-col>
+                <div>
+                    <ion-button class="colorRange" Expand="full" shape="round" color="dark" (click)="ChangeColor('dark')"></ion-button>
+                </div>
+              </ion-col>
+              <ion-col>
+                  <div>
+                      <ion-button class="colorRange" Expand="full" shape="round" color="success" (click)="ChangeColor('success')"></ion-button>
+                  </div>
+                </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
   </div>
 </ion-content>
