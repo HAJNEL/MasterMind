@@ -1,23 +1,23 @@
-<head>  
-    <link href="assets/animate.css" rel="stylesheet">
-    <link href="/src/app/home/home.page.scss" rel="stylesheet">
-</head>  
+<head>
+  <link href="/assets/animate.css" rel="stylesheet">
+  <link href="/src/app/home/home.page.scss" rel="stylesheet">
+</head>
 <ion-header>
   <ion-toolbar>
     <ion-title>
 
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-card (click)="ToggleColorSelector()">
-        <h1 style="text-align: center;">Master Mind</h1>
-        
-        </ion-card>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card (click)="ToggleColorSelector()">
+              <h1 style="text-align: center;">Master Mind</h1>
+
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
       <!-- <ion-button color="primary" Expand="full">
-          <ion-icon name="color-palette"></ion-icon>
+          <ion-icon name="color-palette"></ion-icon>FF
           Color
     </ion-button> -->
     </ion-title>
@@ -25,40 +25,96 @@
 </ion-header>
 
 <div class="slideInUp">
-    <ion-button color="primary" class="SelectedColor" Expand="full" style="height: 10px;"></ion-button>
+  <ion-button color="primary" class="SelectedColor" Expand="full" style="height: 10px;"></ion-button>
 </div>
 <ion-content>
-  <div class="col-xs-12" class="ColorSelector" style="visibility: collapse; background-image: 'assets/brain-icon-heart.png'" >
-      <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div>
-                  <ion-button class="colorRange" shape="round" Expand="full" color="primary" (click)="ChangeColor('primary')" ></ion-button>
-              </div>
-            </ion-col>
-            <ion-col>
-              <div>
-                  <ion-button class="colorRange" shape="round" Expand="full" color="warning" (click)="ChangeColor('warning')"></ion-button>
-              </div>
-            </ion-col>
-            <ion-col>
-              <div>
-                  <ion-button class="colorRange" width="100%" shape="round" Expand="full" color="danger" (click)="ChangeColor('danger')" ></ion-button>
-              </div>
-            </ion-col>
-            <ion-col>
-                <div>
-                    <ion-button class="colorRange" Expand="full" shape="round" color="dark" (click)="ChangeColor('dark')"></ion-button>
-                </div>
-              </ion-col>
-              <ion-col>
-                  <div>
-                      <ion-button class="colorRange" Expand="full" shape="round" color="success" (click)="ChangeColor('success')"></ion-button>
-                  </div>
-                </ion-col>
+  <div class="col-xs-12" class="ColorSelector"
+    style="visibility: collapse; background-image: 'assets/brain-icon-heart.png'">
+    <ion-grid>
+      <ion-row text-align>
 
-          </ion-row>
-        </ion-grid>
+        <!-- BLUE + LIGHT BLUE -->
+        <ion-col>
+          <div>
+            <ion-button class="colorRange" shape="round" color="primary" id="primary" (click)="ChangeColor('primary')">
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col>
+            <div>
+              <ion-button class="colorRange" shape="round" color="light-blue" id="light-blue"
+                (click)="ChangeColor('light-blue')"></ion-button>
+            </div>
+          </ion-col>
+        <!-- BLUE + LIGHT BLUE -->
+
+        <!-- YELLOW + GREEN -->
+        <ion-col>
+            <div>
+              <ion-button class="colorRange" shape="round" color="warning" id="warning" (click)="ChangeColor('warning')">
+              </ion-button>
+            </div>
+          </ion-col>
+          <ion-col>
+              <div>
+                <ion-button class="colorRange" shape="round" color="success" id="success" (click)="ChangeColor('success')">
+                </ion-button>
+              </div>
+            </ion-col>
+        <!-- YELLOW + GREEN -->
+      </ion-row>
+        <ion-row text-align>
+        <!-- RED + ORNAGE -->
+        <ion-col>
+            <div>
+              <ion-button class="colorRange" width="100%" shape="round" color="danger" id="danger"
+                (click)="ChangeColor('danger')"></ion-button>
+            </div>
+          </ion-col>
+          <ion-col>
+              <div>
+                <ion-button class="colorRange" width="100%" shape="round" color="orange" id="orange"
+                  (click)="ChangeColor('orange')"></ion-button>
+              </div>
+            </ion-col>
+        <!-- RED + ORNAGE -->
+
+        <!-- BLACK + PURPLE -->
+        <ion-col>
+            <div>
+              <ion-button class="colorRange" shape="round" color="dark" id="dark" (click)="ChangeColor('dark')">
+              </ion-button>
+            </div>
+          </ion-col>
+  
+          <ion-col>
+            <div>
+              <ion-button class="colorRange" shape="round" color="purple" id="purple" (click)="ChangeColor('purple')">
+              </ion-button>
+            </div>
+          </ion-col>
+        <!-- BLACK + PURPLE -->
+      </ion-row>
+
+      <ion-row class="center">
+        <ion-col style="text-align: center;">
+          <ion-button class="colorSelection" id="SelectBox1" Expand="full" color="Light" (click)="SetColor(1)">
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="colorSelection" id="SelectBox2" Expand="full" color="Light" (click)="SetColor(2)">
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="colorSelection" id="SelectBox3" Expand="full" color="Light" (click)="SetColor(3)">
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="colorSelection" id="SelectBox4" Expand="full" color="Light" (click)="SetColor(4)">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
   </div>
 </ion-content>
